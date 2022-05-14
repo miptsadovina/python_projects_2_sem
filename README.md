@@ -1,1 +1,3 @@
-# python_projects_2_sem
+# Bot
+ссылка: 
+@TheFirstCinemaBot
