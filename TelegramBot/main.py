@@ -3,6 +3,15 @@ import pandas as pd
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.filters import Text
+from keep_alive import keep_alive
+from aiogram.types import BotCommand
+from User import *
+keep_alive()
+
+def token():
+    f = open('token.txt', 'r')
+    global bot = Bot(token = f.read())
+
 
 dp = Dispatcher(bot)
 logging.basicConfig(level=logging.INFO)
@@ -149,4 +158,5 @@ async def make_random(message):
 
 
 if __name__ == "__main__":
+    token()
     executor.start_polling(dp, skip_updates=True)
